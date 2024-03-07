@@ -8,7 +8,7 @@ However, PRs with the fixes or proposals are welcomed!
 
 The goal of the assignment is to learn how to work with strings in JS.
 
-**Active usage of [documentation](https://developer.mozilla.org/en-US/) is strongly recommended!**
+**Active usage of [documentation](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String) is strongly recommended!**
 
 ## Prepare and test
 
@@ -38,6 +38,7 @@ The goal of the assignment is to learn how to work with strings in JS.
    ```
 
    Read the task description in the comment above the function. Try to understand the idea. You can see the tests prepared if you don't understand it.
+
 7. Write your code in `src/*.js`.
 
    Remove the throwing error line from function body:

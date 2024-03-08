@@ -1,33 +1,40 @@
-// console.log('hello world');
-// console.log('hello');
-function removeLastOccurrences(str, value) {
-  const firstIndexOfValue = str.lastIndexOf(value);
-  const valueLength = value.length;
-  const lastIndexOfValue = firstIndexOfValue + valueLength;
-
-  if (firstIndexOfValue < 0) {
-    console.log(`"${str}"`);
-    return str;
+function sumOfCodes(str) {
+  if (typeof str !== 'string' || str.length === 0) {
+    console.log(0);
+    return 0;
   }
 
-  // console.log('firstIndexOfValue:', firstIndexOfValue);
-  // console.log('lastIndexOfValue:', lastIndexOfValue);
-  // console.log('valueLength:', valueLength);
+  console.log(str);
 
-  // const rez = str.slice(firstIndexOfValue, lastIndexOfValue);
+  let summ = 0;
 
-  const result = str.slice(0, firstIndexOfValue) + str.slice(lastIndexOfValue);
+  for (let i = 0; i < str.length; i += 1) {
+    // console.log('code:', str.charCodeAt(i));
+    // console.log('char:', str[i]);
 
-  // console.log(`"${rez}"`);
-  console.log(`"${result}"`);
-
-  // return str.replace(value, '');
+    summ += str.charCodeAt(i);
+  }
+  console.log('summ:', summ);
+  console.log('=====');
+  // console.log(str.charCodeAt(1));
+  // console.log(str.charCodeAt(2));
+  // console.log(str.charCodeAt(3));
+  // console.log('=====');
 }
 
-removeLastOccurrences('To be or not to be', 'be'), 'To be or not to ';
-removeLastOccurrences('I like legends', 'end');
-removeLastOccurrences('ABABAB', 'BA');
-removeLastOccurrences('', 'test');
-removeLastOccurrences('Hello, World!', '');
-removeLastOccurrences('The quick brown fox', 'dog');
-removeLastOccurrences('!@#', '!@');
+sumOfCodes('My String');
+//  861
+sumOfCodes('12345');
+//  255
+sumOfCodes('');
+//  0
+sumOfCodes();
+//  0
+sumOfCodes(null);
+//  0
+sumOfCodes(undefined);
+//  0
+sumOfCodes('Hello, World!');
+//  1129
+sumOfCodes('!@#$%^&*()');
+//  460

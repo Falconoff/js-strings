@@ -1,12 +1,6 @@
-function invertCase(str) {
-  return str
-    .split('')
-    .map((char) =>
-      char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
-    )
-    .join('');
+function extractNameFromTemplate(value) {
+  const substring = value.substring(7, value.length - 1);
+  console.log(substring);
 }
 
-console.log(invertCase('Hello, World!'));
-console.log(invertCase('JavaScript is Fun'));
-console.log(invertCase('12345'));
+extractNameFromTemplate('Hello, John Doe!');
